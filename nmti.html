@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NMTI - 赛博人格测试</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+*,::backdrop,:after,:before{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:#3b82f680;--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/*! tailwindcss v3.4.19 | MIT License | https://tailwindcss.com*/*,:after,:before{box-sizing:border-box;border:0 solid #e5e7eb}:after,:before{--tw-content:""}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;-o-tab-size:4;tab-size:4;font-family:ui-sans-serif,system-ui,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol,Noto Color Emoji;font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace,SFMono-Regular,Menlo,Monaco,Consolas,Liberation Mono,Courier New,monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:initial}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:initial;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:initial}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0}fieldset,legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::-moz-placeholder,textarea::-moz-placeholder{opacity:1;color:#9ca3af}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0}.bottom-1{bottom:.25rem}.bottom-1\/4{bottom:25%}.left-1{left:.25rem}.left-1\/4{left:25%}.right-1{right:.25rem}.right-1\/3{right:33.333333%}.right-1\/4{right:25%}.top-1{top:.25rem}.top-1\/2{top:50%}.top-1\/4{top:25%}.z-10{z-index:10}.mx-auto{margin-left:auto;margin-right:auto}.mb-1{margin-bottom:.25rem}.mb-2{margin-bottom:.5rem}.mb-3{margin-bottom:.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.mr-2{margin-right:.5rem}.mt-0{margin-top:0}.mt-0\.5{margin-top:.125rem}.mt-4{margin-top:1rem}.mt-6{margin-top:1.5rem}.flex{display:flex}.table{display:table}.grid{display:grid}.hidden{display:none}.h-2{height:.5rem}.h-3{height:.75rem}.h-64{height:16rem}.h-96{height:24rem}.h-full{height:100%}.min-h-screen{min-height:100vh}.w-64{width:16rem}.w-96{width:24rem}.w-full{width:100%}.max-w-lg{max-width:32rem}.flex-1{flex:1 1 0%}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.cursor-pointer{cursor:pointer}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-2{gap:.5rem}.gap-3{gap:.75rem}.space-y-3>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(.75rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(.75rem*var(--tw-space-y-reverse))}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem*(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem*var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.overflow-y-auto{overflow-y:auto}.rounded-2xl{border-radius:1rem}.rounded-full{border-radius:9999px}.rounded-xl{border-radius:.75rem}.border{border-width:1px}.border-0{border-width:0}.bg-cyan-500{--tw-bg-opacity:1;background-color:rgb(6 182 212/var(--tw-bg-opacity,1))}.bg-cyan-500\/10{background-color:#06b6d41a}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55/var(--tw-bg-opacity,1))}.bg-pink-500{--tw-bg-opacity:1;background-color:rgb(236 72 153/var(--tw-bg-opacity,1))}.bg-pink-500\/20{background-color:#ec489933}.bg-purple-500{--tw-bg-opacity:1;background-color:rgb(168 85 247/var(--tw-bg-opacity,1))}.bg-purple-500\/20{background-color:#a855f733}.bg-gradient-to-r{background-image:linear-gradient(to right,var(--tw-gradient-stops))}.from-orange-500{--tw-gradient-from:#f97316 var(--tw-gradient-from-position);--tw-gradient-to:#f9731600 var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.from-purple-600{--tw-gradient-from:#9333ea var(--tw-gradient-from-position);--tw-gradient-to:#9333ea00 var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from),var(--tw-gradient-to)}.to-pink-600{--tw-gradient-to:#db2777 var(--tw-gradient-to-position)}.to-red-500{--tw-gradient-to:#ef4444 var(--tw-gradient-to-position)}.p-4{padding:1rem}.p-5{padding:1.25rem}.px-3{padding-left:.75rem;padding-right:.75rem}.px-4{padding-left:1rem;padding-right:1rem}.px-8{padding-left:2rem;padding-right:2rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.py-4{padding-top:1rem;padding-bottom:1rem}.py-8{padding-top:2rem;padding-bottom:2rem}.pb-12{padding-bottom:3rem}.text-left{text-align:left}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-6xl{font-size:3.75rem;line-height:1}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-sm{font-size:.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:.75rem;line-height:1rem}.font-black{font-weight:900}.font-bold{font-weight:700}.font-semibold{font-weight:600}.leading-relaxed{line-height:1.625}.text-cyan-400{--tw-text-opacity:1;color:rgb(34 211 238/var(--tw-text-opacity,1))}.text-gray-200{--tw-text-opacity:1;color:rgb(229 231 235/var(--tw-text-opacity,1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175/var(--tw-text-opacity,1))}.text-gray-500{--tw-text-opacity:1;color:rgb(107 114 128/var(--tw-text-opacity,1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99/var(--tw-text-opacity,1))}.text-green-400{--tw-text-opacity:1;color:rgb(74 222 128/var(--tw-text-opacity,1))}.text-orange-400{--tw-text-opacity:1;color:rgb(251 146 60/var(--tw-text-opacity,1))}.text-pink-400{--tw-text-opacity:1;color:rgb(244 114 182/var(--tw-text-opacity,1))}.text-purple-400{--tw-text-opacity:1;color:rgb(192 132 252/var(--tw-text-opacity,1))}.text-red-400{--tw-text-opacity:1;color:rgb(248 113 113/var(--tw-text-opacity,1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255/var(--tw-text-opacity,1))}.blur{--tw-blur:blur(8px)}.blur,.blur-3xl{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.blur-3xl{--tw-blur:blur(64px)}.backdrop-filter{backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition{transition-property:color,background-color,border-color,text-decoration-color,fill,stroke,opacity,box-shadow,transform,filter,backdrop-filter;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(.4,0,.2,1);transition-duration:.15s}.duration-1000{transition-duration:1s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.ease-out{transition-timing-function:cubic-bezier(0,0,.2,1)}.hover\:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05}.hover\:scale-105:hover,.hover\:scale-\[1\.02\]:hover{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover\:scale-\[1\.02\]:hover{--tw-scale-x:1.02;--tw-scale-y:1.02}@media (min-width:768px){.md\:p-6{padding:1.5rem}.md\:px-6{padding-left:1.5rem;padding-right:1.5rem}.md\:py-12{padding-top:3rem;padding-bottom:3rem}.md\:py-6{padding-top:1.5rem;padding-bottom:1.5rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-3xl{font-size:1.875rem;line-height:2.25rem}.md\:text-8xl{font-size:6rem;line-height:1}.md\:text-base{font-size:1rem;line-height:1.5rem}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}}
+
+    :root {
+      --primary: #8B5CF6;
+      --secondary: #06B6D4;
+      --accent: #F472B6;
+      --bg: #0F0F1A;
+      --surface: #1A1A2E;
+      --text: #F8FAFC;
+      --text-secondary: #94A3B8;
+      --orange: #F59E0B;
+    }
+    * { box-sizing: border-box; }
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+    .font-cyber { font-family: 'Orbitron', monospace; }
+
+    /* Neon glow effects */
+    .neon-purple { text-shadow: 0 0 10px var(--primary), 0 0 30px var(--primary), 0 0 60px var(--primary); }
+    .neon-cyan { text-shadow: 0 0 10px var(--secondary), 0 0 30px var(--secondary); }
+    .neon-pink { text-shadow: 0 0 10px var(--accent), 0 0 30px var(--accent); }
+    .neon-orange { text-shadow: 0 0 10px var(--orange), 0 0 30px var(--orange); }
+
+    .glow-border {
+      box-shadow: 0 0 15px rgba(139, 92, 246, 0.3), inset 0 0 15px rgba(139, 92, 246, 0.1);
+      border: 1px solid rgba(139, 92, 246, 0.5);
+    }
+    .glass {
+      background: rgba(26, 26, 46, 0.8);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    /* Animations */
+    @keyframes pulse-glow {
+      0%, 100% { box-shadow: 0 0 5px var(--primary), 0 0 20px var(--primary); }
+      50% { box-shadow: 0 0 20px var(--primary), 0 0 40px var(--primary); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .animate-fadeInUp { animation: fadeInUp 0.4s ease-out forwards; }
+    .animate-pulse-glow { animation: pulse-glow 2s ease-in-out infinite; }
+    .animate-float { animation: float 3s ease-in-out infinite; }
+
+    /* Option buttons */
+    .option-btn {
+      transition: all 0.2s ease;
+      border: 1px solid rgba(255,255,255,0.1);
+      background: rgba(255,255,255,0.05);
+    }
+    .option-btn:hover {
+      border-color: var(--primary);
+      box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+      transform: scale(1.02);
+    }
+    .option-btn.selected {
+      background: rgba(139, 92, 246, 0.3);
+      border-color: var(--primary);
+      box-shadow: 0 0 25px rgba(139, 92, 246, 0.5);
+    }
+
+    /* Progress bar */
+    .progress-fill {
+      transition: width 0.4s ease;
+      background: linear-gradient(90deg, var(--primary), var(--accent));
+    }
+
+    /* Tags */
+    .tag {
+      display: inline-block;
+      padding: 4px 12px;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      margin: 4px;
+      animation: fadeInUp 0.3s ease-out forwards;
+      opacity: 0;
+    }
+
+    /* Result code letters */
+    .result-letter {
+      font-size: clamp(2.5rem, 10vw, 5rem);
+      font-weight: 900;
+      display: inline-block;
+    }
+
+    /* Scrollbar */
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: var(--primary); border-radius: 3px; }
+  
+  </style>
+</head>
+<body class="min-h-screen">
+  <div id="app" class="min-h-screen"></div>
+
+  <script>
+
+    // ============ DATA ============
+    const questions = [
+      // Q1-8 互动维度 (E/I)
+      {
+        text: `看到微博热搜第一极其离谱，你的赛博反应是：`,
+        options: [
+          `键盘冒奶，立刻化身"键仙"狂敲800字输出高见`,
+          `默默截图发到"相亲相爱没烦恼"群里当赛博电子榨菜`,
+          `关手机，去捡垃圾`
+        ]
+      },
+      {
+        text: `你的朋友圈/社交账号日常状态更像：`,
+        options: [
+          `赛博暴露狂，拉个屎都要配三张不同滤镜的照片`,
+          `赛博兵马俑，上次发动态还是微商点赞换不锈钢盆`,
+          `仅三天可见，里面全是不知所云的标点符号`
+        ]
+      },
+      {
+        text: `被拉进一个500人的陌生大群，你的生存策略是：`,
+        options: [
+          `光速甩出一个极其炸裂的"疯猴"表情包炸鱼`,
+          `迅速修改群昵称为"文件传输助手"然后装死`,
+          `只有抢到0.01元红包时，才发一句"老板大气"`
+        ]
+      },
+      {
+        text: `刷短视频看到一个极其逆天的迷惑操作，你会：`,
+        options: [
+          `在评论区疯狂艾特你那三个冤种朋友并打出"@张三 出来学"`,
+          `默默长按点赞，让这坨答辩推给更多无辜的人`,
+          `脑子里闪过一句"神经病"就划走了`
+        ]
+      },
+      {
+        text: `你的浏览器收藏夹和浏览记录如果被曝光：`,
+        options: [
+          `无所谓，甚至可以开个直播给大家挨个讲解我的冲浪轨迹`,
+          `我会立刻嚼碎手机咽下去，带着我的赛博秘密火化`,
+          `没什么见不得人的，全在隐身模式下看的`
+        ]
+      },
+      {
+        text: `正在激情打游戏，突然遇到队友疯狂送人头：`,
+        options: [
+          `立刻开麦化身导师，教他做人、教他认字、教他如何重装系统`,
+          `闭麦，听歌，把队友当成游戏里的高级AI怪物`,
+          `直接退出游戏，去吃顿好的`
+        ]
+      },
+      {
+        text: `如果你发了一条状态，半小时了连个点赞都没有，你会：`,
+        options: [
+          `觉得非常没面子，立刻删掉，反思自己哪里发挥失常`,
+          `无所谓，我发出来本来就是给自己当赛博日记看的`,
+          `强迫身边的狗给按个赞`
+        ]
+      },
+      {
+        text: `当你混进一个完全不懂的圈子（比如你是个直男混进了美妆群）：`,
+        options: [
+          `大胆开麦："家人们，肥皂洗脸有什么问题吗？"`,
+          `潜水苟住，暗中观察，偷偷窃取行业机密`,
+          `待两分钟嫌吵，直接退群`
+        ]
+      },
+      // Q9-16 内核维度 (S/D)
+      {
+        text: `刷到一条BGM极其煽情、主角极其惨的视频：`,
+        options: [
+          `瞬间眼眶湿润，含泪打下"陌生人，祝你幸福"`,
+          `敏锐地察觉到"马上要上链接卖抽纸了"，留言"倒数三秒，上车！"`,
+          `划走，我月薪三千看不得这些`
+        ]
+      },
+      {
+        text: `娱乐圈顶流突然被爆出塌房大瓜，你的反应是：`,
+        options: [
+          `信仰崩塌！怒写小作文痛斥渣男/渣女，大呼再也不相信爱情了`,
+          `狂喜乱舞，提着塑料袋去各路吃瓜群化缘："求求了，给我一份原片！"`,
+          `这人谁啊？有我今天中午外卖没满减重要吗？`
+        ]
+      },
+      {
+        text: `面对网上动不动就"全网通缉海王"的纯爱小剧场，你觉得：`,
+        options: [
+          `真诚才是必杀技，背叛感情的人就该被钉在赛博耻辱柱上`,
+          `哈哈哈大白天的又做梦了，快进到双方其实是为了引流卖莆田鞋`,
+          `不关心，不如多背几个单词`
+        ]
+      },
+      {
+        text: `对于"年轻人到底该卷还是该躺"的旷世难题，你的态度是：`,
+        options: [
+          `时代的一粒灰落下来就是一座山，真的很心疼我们这一代`,
+          `别问，问就是"吗喽的命也是命"，早F晚E才是主旋律`,
+          `关我屁事，今天星期五`
+        ]
+      },
+      {
+        text: `看到有人在群里极其认真、引经据典地讲大道理，你会：`,
+        options: [
+          `觉得他说得很有深度，忍不住想跟他辩论一番`,
+          `脑子里自动配上"🤡"的BGM，觉得这人好装，真有乐子`,
+          `太长不看（TLNR）`
+        ]
+      },
+      {
+        text: `别人给你发了那种极其土味、甚至有些生理不适的土味视频：`,
+        options: [
+          `觉得恶俗至极，严重污染了我的眼睛，要求对方道歉`,
+          `看得津津有味，并回复"土到极致就是潮，再来点"`,
+          `直接无视`
+        ]
+      },
+      {
+        text: `朋友半夜找你哭诉生活太难、工作太累，你会：`,
+        options: [
+          `耐心倾听，陪着一起骂老板，提供最高级别的情绪价值`,
+          `发过去一张"放下助人情结，尊重他人命运"的梗图`,
+          `"不好意思刚睡着，明早说"`
+        ]
+      },
+      {
+        text: `你认为互联网的本质其实是：`,
+        options: [
+          `连接人类情感、寻找同频灵魂的乌托邦`,
+          `一个巨大的垃圾场、动物园和精神病院的结合体`,
+          `一个打发时间的工具罢了`
+        ]
+      },
+      // Q17-24 表达维度 (R/M)
+      {
+        text: `在评论区遇到一个智商仿佛没发育完全的杠精，你选择：`,
+        options: [
+          `引经据典，列出1234条论据，试图从底层逻辑修复他的大脑`,
+          `直接一张"你什么货色我什么脸色.jpg"怼脸上，外加一句"急了？"`,
+          `懒得理，这种人活着就是对他自己最大的惩罚`
+        ]
+      },
+      {
+        text: `吃到了一家超级好吃的餐厅，你发动态会配什么文案：`,
+        options: [
+          `"食材新鲜，火候恰到好处，特别是那个酱汁的层次感……"`,
+          `"家人们谁懂啊！尊嘟假嘟绝绝子，好吃到跺jiojio！"`,
+          `拍张图，什么都不写`
+        ]
+      },
+      {
+        text: `别人发给你一个长达40分钟的《硬核解析：人类文明的未来》：`,
+        options: [
+          `沐浴更衣，泡杯热茶，记下时间戳认真学习`,
+          `评论区大喊一声："课代表呢？连个省流都没有，抬走！"`,
+          `"马了=看了"，然后扔进收藏夹里吃灰到下辈子`
+        ]
+      },
+      {
+        text: `如果你要嘲讽一个人很土，你的赛博辞藻会是：`,
+        options: [
+          `"你的审美似乎还停留在上个世纪，缺乏基本的现代认知"`,
+          `"有一种不顾死活的美，建议直接入土"`,
+          `"哦，牛批"`
+        ]
+      },
+      {
+        text: `面对突如其来的负面热点新闻，你的第一获取信息途径是：`,
+        options: [
+          `去看官方通报、主流媒体的长篇深度报道`,
+          `去贴吧、豆瓣、小红书看网友们编的段子和缩写爆料`,
+          `等热度过了再看，反正现在都在反转`
+        ]
+      },
+      {
+        text: `手机里的表情包存货，哪种风格占据了绝对的主导地位？`,
+        options: [
+          `萌系猫狗、系统自带、能够表达明确礼貌态度的表情`,
+          `高糊绿帽、阴阳怪气、发出去可能会挨打的熊猫头`,
+          `我聊天基本只打字`
+        ]
+      },
+      {
+        text: `"抛开事实不谈，难道你就没有一点错吗？"听到这句话你：`,
+        options: [
+          `血压飙升，抛开事实还能谈什么？这不是纯纯的逻辑黑洞吗！`,
+          `狂喜，立刻回复："抛开事实不谈，那我抛开什么谈？抛开你家祖坟吗？"`,
+          `面无表情地看着屏幕发呆`
+        ]
+      },
+      {
+        text: `你的日常聊天记录里，以下哪种元素出现频率最高？`,
+        options: [
+          `完整的标点符号、严谨的定语从句`,
+          `xswl、yyds、dddd（懂得都懂）、各种令人费解的字母组合`,
+          `只有"嗯"、"哦"、"好"`
+        ]
+      },
+      // Q25-32 生存维度 (A/B)
+      {
+        text: `打游戏操作下饭，被队友疯狂Ping问号并打字辱骂：`,
+        options: [
+          `瞬间狂暴，化身钢琴家，以每分钟120字的手速问候他全族`,
+          `马上公屏打字："哥哥骂得对，我是猪，原谅我好不好嘛~"`,
+          `拖拽聊天框到屏幕外，假装没看见`
+        ]
+      },
+      {
+        text: `看到群里有个装X犯在疯狂晒他刚买的奢侈品/豪车：`,
+        options: [
+          `找个死角挑刺："这内饰颜色好土，哪年的库存车啊？"`,
+          `马上跟上队形："爹，V我50证明一下实力"`,
+          `默默点开他的头像，设置"不看他的朋友圈"`
+        ]
+      },
+      {
+        text: `现实生活中被老板画了惊天大饼后，你的赛博反应是：`,
+        options: [
+          `在匿名论坛或工作小群里阴阳怪气，疯狂反击，绝不吃亏`,
+          `表面上："好的老板我悟了！"背地里去群里发："牛马又要去推磨了"`,
+          `左耳朵进右耳朵出，一到6点准时消失在工位`
+        ]
+      },
+      {
+        text: `在网上不小心站错队、翻车了被群嘲，你的公关策略是：`,
+        options: [
+          `死鸭子嘴硬，强词夺理，我就是世界的主宰我永远没有错`,
+          `光速滑跪，立刻P一张自己带红鼻头的小丑图发出去任人嘲笑`,
+          `拔网线，注销账号，秽土转生`
+        ]
+      },
+      {
+        text: `当有人试图在评论区向你强行推销他的价值观时：`,
+        options: [
+          `立刻开启战斗模式，逐字逐句拆解他的防线，直到对方破防`,
+          `回复一句"啊对对对，你说的都对"，让他一拳打在棉花上`,
+          `不回复，只在心里骂一句傻X`
+        ]
+      },
+      {
+        text: `你的社交媒体个性签名（或内心独白）更接近哪种状态？`,
+        options: [
+          `"人不犯我，我不犯人；人若犯我，顺着网线过去刨坟"`,
+          `"已老实，求放过 / 保持呼吸，尽量不要断气"`,
+          `留白，一个字都不写`
+        ]
+      },
+      {
+        text: `如果有一天你突然变成暴发户有了很多钱，你的网络行为会：`,
+        options: [
+          `买水军把以前骂过我的人全部网暴一遍！`,
+          `依然是个在群里发"富婆饿饿饭饭"的赛博屌丝，这叫不忘初心`,
+          `谁还上网啊，现实世界玩乐去了`
+        ]
+      },
+      {
+        text: `总结一下，在这个充满戾气的赛博空间里，你的终极生存影分身是：`,
+        options: [
+          `手持键盘的斯巴达勇士，随时准备与全世界开战`,
+          `一只熟练掌握各种下跪、求饶和自黑技巧的水豚`,
+          `毫无存在感的一团空气`
+        ]
+      }
+    ];
+
+    const personalityTypes = {
+      'ESRA': {
+        name: `赛博判官`,
+        tags: [`正义使者`, `键政达人`, `互联网法官`, `道德观察员`],
+        profile: `虽然你每天在网络上主持公道累得半死，但你始终相信这个世界需要秩序，哪怕只是在评论区`,
+        match: 'ISRB',
+        rival: 'DIMB',
+        niuMa: 35
+      },
+      'ESRB': {
+        name: `赛博老实人`,
+        tags: [`重感情`, `心软`, `容易被骗`, `反向背锅侠`],
+        profile: `虽然你嘴上说着要躺平，但朋友一开口你就第一个冲过去帮忙，然后回家偷偷内耗`,
+        match: 'DSRB',
+        rival: 'DSMA',
+        niuMa: 72
+      },
+      'ESMA': {
+        name: `嘴强理论家`,
+        tags: [`反驳大师`, `逻辑怪`, `杠铃本铃`, `清醒的疯子`],
+        profile: `虽然你可以在网上同时和五个人吵架还占据上风，但你其实知道自己在诡辩，只是享受那种智识碾压的快感`,
+        match: 'DIRB',
+        rival: 'ISMA',
+        niuMa: 45
+      },
+      'ESMB': {
+        name: `阴阳带师`,
+        tags: [`阴阳怪气十级`, `嘴毒心暖`, `高级乳法`, `讽刺艺术家`],
+        profile: `虽然你输出的每一句话都让人想打，但只有懂你的人知道你是真的在乎，只是不肯直说`,
+        match: 'DSMB',
+        rival: 'ISRB',
+        niuMa: 58
+      },
+      'ISRA': {
+        name: `理性潜水员`,
+        tags: [`暗中观察`, `精准吐槽`, `社恐但清醒`, `匿名王者`],
+        profile: `虽然你在群里从来不说话，但你的点赞和收藏暴露了你才是那个真正的互联网老油条`,
+        match: 'ESRB',
+        rival: 'DIRB',
+        niuMa: 25
+      },
+      'ISRB': {
+        name: `真诚社恐`,
+        tags: [`点赞狂魔`, `只看不发`, `默默支持`, `互联网透明人`],
+        profile: `虽然你看起来是网络隐形人，但你的默默陪伴其实是这个互联网最稀缺的温柔`,
+        match: 'ESRA',
+        rival: 'DSMB',
+        niuMa: 62
+      },
+      'ISMA': {
+        name: `暗号大师`,
+        tags: [`加密通话`, `只有同温层懂`, `缩写狂魔`, `梗图专家`],
+        profile: `虽然你说的话看起来毫无逻辑，但实际上只有特定的人才能解锁你真正的意思，这叫赛博暗语`,
+        match: 'DIMA',
+        rival: 'ESMA',
+        niuMa: 40
+      },
+      'ISMB': {
+        name: `高冷自闭`,
+        tags: [`发消息给未来的自己`, `已读不回专家`, `独居日记`, `网络鲁滨逊`],
+        profile: `虽然你发的每条动态都像是留给子孙后代的遗产，但你其实只是在享受这种无人问津的自由`,
+        match: 'DSRA',
+        rival: 'ESRB',
+        niuMa: 78
+      },
+      'DSRA': {
+        name: `赛博鲁迅`,
+        tags: [`嬉皮笑脸写悲剧`, `嘴毒心热`, `看透一切`, `人间清醒`],
+        profile: `虽然你每天用最轻松的语气说着最讽刺的话，但其实你是真的在意这个世界，只是不肯走温情路线`,
+        match: 'ISMB',
+        rival: 'ESRB',
+        niuMa: 42
+      },
+      'DSRB': {
+        name: `互联网清流`,
+        tags: [`出淤泥而不染`, `难得正经`, `被串子当靶子`, `真相帝`],
+        profile: `虽然你经常因为太真诚而被嘲笑，但你始终坚持说真话，哪怕真话通常不太好听`,
+        match: 'ESRB',
+        rival: 'DSMA',
+        niuMa: 55
+      },
+      'DSMA': {
+        name: `抽象教父`,
+        tags: [`解构一切`, `意义lessness`, `后现代艺术家`, `乐子制造机`],
+        profile: `虽然你表面上在解构一切，但能让你真正破防的只有那么几件事，只是你不会让任何人发现`,
+        match: 'DIRA',
+        rival: 'DSRB',
+        niuMa: 30
+      },
+      'DSMB': {
+        name: `串子之王`,
+        tags: [`专业拱火`, `引流带师`, `Ctrl-C/V大师`, `互联网搅屎棍`],
+        profile: `虽然你嘴上说着我只是乐子人没有恶意，但你每次出现都精准踩中所有人的神经，这天赋不用来搞破坏太可惜了`,
+        match: 'ESMB',
+        rival: 'ISRB',
+        niuMa: 88
+      },
+      'DIRA': {
+        name: `纯正乐子人`,
+        tags: [`笑对人生`, `万物皆可乐`, `情绪稳定大师`, `赛博弥勒`],
+        profile: `虽然你看起来对一切都哈哈哈，但只有深夜独处的时候，你知道自己的内里其实比谁都认真`,
+        match: 'DSMA',
+        rival: 'ISRA',
+        niuMa: 20
+      },
+      'DIRB': {
+        name: `摸鱼带师`,
+        tags: [`能躺着不站着`, `带薪排泄专家`, `职场哲学家`, `反内卷先锋`],
+        profile: `虽然你天天嘴上说摸鱼，但每次deadline你都准时交，只是方式可能是复制粘贴加AI`,
+        match: 'ESMA',
+        rival: 'ISRA',
+        niuMa: 91
+      },
+      'DIMA': {
+        name: `节奏大师`,
+        tags: [`专业制造热评`, `引战艺术家`, `流量密码`, `互联网海王`],
+        profile: `虽然你经常被骂蹭热度，但你其实比谁都清楚流量在哪里，毕竟不蹭怎么养活自己`,
+        match: 'ISMA',
+        rival: 'ESRA',
+        niuMa: 85
+      },
+      'DIMB': {
+        name: `纯纯牛马`,
+        tags: [`吗喽本喽`, `牛马精神`, `早F晚E`, `生活奴隶`],
+        profile: `虽然你天天自嘲牛马，但第二天还是准时出现在工位上，这才是真正的赛博打工魂`,
+        match: 'DIRB',
+        rival: 'ESRA',
+        niuMa: 98
+      }
+    };
+
+    // ============ STATE ============
+    const state = {
+      currentQuestion: 0,
+      answers: new Array(32).fill(null),
+      scores: { E: 0, I: 0, S: 0, D: 0, R: 0, M: 0, A: 0, B: 0 },
+      phase: 'cover'
+    };
+
+    // ============ RENDER ============
+    function render() {
+      const app = document.getElementById('app');
+      if (state.phase === 'cover') {
+        app.innerHTML = renderCover();
+      } else if (state.phase === 'test') {
+        app.innerHTML = renderTest();
+      } else if (state.phase === 'result') {
+        app.innerHTML = renderResult();
+      }
+      attachEvents();
+    }
+
+    function renderCover() {
+      return `
+        <div class="min-h-screen flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden">
+          <div class="absolute inset-0 overflow-hidden">
+            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-float" style="animation-delay: 1s"></div>
+            <div class="absolute top-1/2 right-1/3 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-float" style="animation-delay: 2s"></div>
+          </div>
+
+          <div class="relative z-10 text-center max-w-lg mx-auto animate-fadeInUp">
+            <div class="mb-6">
+              <span class="text-6xl md:text-8xl font-cyber font-black neon-purple">NMTI</span>
+            </div>
+
+            <h1 class="text-xl md:text-2xl font-cyber text-cyan-400 mb-2 neon-cyan">赛博人格测试</h1>
+            <p class="text-gray-400 mb-8 text-sm md:text-base">
+              在这个人均心理大师的时代<br>
+              你的赛博人格究竟是什么型号？
+            </p>
+
+            <div class="grid grid-cols-2 gap-3 mb-8">
+              <div class="glass glow-border rounded-xl p-4 animate-float" style="animation-delay: 0.3s">
+                <div class="text-2xl mb-1">🧟</div>
+                <div class="font-cyber text-purple-400 text-sm">I D M B</div>
+                <div class="text-xs text-gray-500">加密谜语人</div>
+              </div>
+              <div class="glass glow-border rounded-xl p-4 animate-float" style="animation-delay: 0.6s">
+                <div class="text-2xl mb-1">⚔️</div>
+                <div class="font-cyber text-cyan-400 text-sm">E S R A</div>
+                <div class="text-xs text-gray-500">赛博判官</div>
+              </div>
+              <div class="glass glow-border rounded-xl p-4 animate-float" style="animation-delay: 0.9s">
+                <div class="text-2xl mb-1">🐍</div>
+                <div class="font-cyber text-pink-400 text-sm">D S M B</div>
+                <div class="text-xs text-gray-500">串子之王</div>
+              </div>
+              <div class="glass glow-border rounded-xl p-4 animate-float" style="animation-delay: 1.2s">
+                <div class="text-2xl mb-1">🐴</div>
+                <div class="font-cyber text-orange-400 text-sm">D I M B</div>
+                <div class="text-xs text-gray-500">纯纯牛马</div>
+              </div>
+            </div>
+
+            <button id="startBtn" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-bold text-lg animate-pulse-glow hover:scale-105 transition-transform cursor-pointer border-0">
+              开始测试 →
+            </button>
+
+            <p class="mt-6 text-gray-600 text-xs">32道题 · 4大维度 · 16种赛博人格</p>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderTest() {
+      const q = questions[state.currentQuestion];
+      const dimensionIndex = Math.floor(state.currentQuestion / 8);
+      const dimensionNames = ['互动', '内核', '表达', '生存'];
+      const dimensionEmojis = ['🌐', '💫', '💬', '⚔️'];
+      const progress = ((state.currentQuestion) / 32) * 100;
+
+      return `
+        <div class="min-h-screen flex flex-col px-3 py-4 md:px-6 md:py-6">
+          <div class="mb-4">
+            <div class="flex items-center gap-3 mb-3">
+              <div class="flex-1 h-2 bg-gray-800 rounded-full overflow-hidden">
+                <div class="progress-fill h-full rounded-full" style="width: ${progress}%"></div>
+              </div>
+              <span class="text-xs text-gray-500 font-cyber">${Math.round(progress)}%</span>
+            </div>
+
+            <div class="flex items-center justify-between">
+              <div class="flex items-center gap-2">
+                <span class="text-xl">${dimensionEmojis[dimensionIndex]}</span>
+                <span class="text-sm text-gray-400">第 ${dimensionIndex + 1}/4 维度：${dimensionNames[dimensionIndex]}</span>
+              </div>
+              <span class="text-xs text-gray-600">${state.currentQuestion + 1}/32</span>
+            </div>
+          </div>
+
+          <div class="flex-1 flex items-center justify-center">
+            <div class="w-full max-w-lg">
+              <div class="glass glow-border rounded-2xl p-5 md:p-6 animate-fadeInUp">
+                <h2 class="text-lg md:text-xl font-semibold mb-6 leading-relaxed">
+                  ${q.text}
+                </h2>
+
+                <div class="space-y-3">
+                  ${q.options.map((opt, idx) => {
+                    const letters = ['A', 'B', 'C'];
+                    const colors = ['text-purple-400', 'text-cyan-400', 'text-pink-400'];
+                    return `
+                      <button class="option-btn w-full text-left px-4 py-3 rounded-xl text-sm md:text-base ${colors[idx]} transition-all" data-option="${idx}">
+                        <span class="font-cyber font-bold mr-2">${letters[idx]}.</span>
+                        ${opt}
+                      </button>
+                    `;
+                  }).join('')}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-4 text-xs text-gray-600">
+            选择后会自动进入下一题
+          </div>
+        </div>
+      `;
+    }
+
+    function renderResult() {
+      const result = calculateResult();
+      const p = personalityTypes[result];
+
+      return `
+        <div class="min-h-screen overflow-y-auto">
+          <div class="px-4 py-8 md:py-12 text-center">
+            <p class="text-gray-500 text-sm mb-2 animate-fadeInUp">你的赛博人格是</p>
+            <div class="mb-2 animate-fadeInUp" style="animation-delay: 0.1s">
+              ${renderResultCode(result)}
+            </div>
+            <h1 class="text-2xl md:text-3xl font-cyber font-bold neon-purple animate-fadeInUp" style="animation-delay: 0.2s">
+              ${p.name}
+            </h1>
+          </div>
+
+          <div class="max-w-lg mx-auto px-4 pb-12 space-y-6">
+            <div class="glass glow-border rounded-2xl p-5 animate-fadeInUp" style="animation-delay: 0.3s">
+              <h3 class="text-sm text-gray-400 mb-3 flex items-center gap-2">
+                <span>🏷️</span> 标签云
+              </h3>
+              <div class="flex flex-wrap">
+                ${p.tags.map((tag, i) => `
+                  <span class="tag text-white" style="animation-delay: ${0.4 + i * 0.1}s; background: ${['#8B5CF6', '#06B6D4', '#F472B6', '#F59E0B'][i % 4]}">
+                    ${tag}
+                  </span>
+                `).join('')}
+              </div>
+            </div>
+
+            <div class="glass glow-border rounded-2xl p-5 animate-fadeInUp" style="animation-delay: 0.5s">
+              <h3 class="text-sm text-gray-400 mb-3 flex items-center gap-2">
+                <span>📝</span> 扎心画像
+              </h3>
+              <p class="text-gray-200 leading-relaxed">${p.profile}</p>
+            </div>
+
+            <div class="glass glow-border rounded-2xl p-5 animate-fadeInUp" style="animation-delay: 0.6s">
+              <h3 class="text-sm text-gray-400 mb-3 flex items-center gap-2">
+                <span>🔗</span> 社交关系
+              </h3>
+              <div class="space-y-3">
+                <div class="flex items-start gap-3">
+                  <span class="text-green-400 mt-0.5">💕</span>
+                  <div>
+                    <div class="text-xs text-gray-500 mb-1">天生一对</div>
+                    <div class="text-sm">${p.match} — ${personalityTypes[p.match].name}</div>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="text-red-400 mt-0.5">⚔️</span>
+                  <div>
+                    <div class="text-xs text-gray-500 mb-1">宿命之敌</div>
+                    <div class="text-sm">${p.rival} — ${personalityTypes[p.rival].name}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="glass glow-border rounded-2xl p-5 animate-fadeInUp" style="animation-delay: 0.7s">
+              <h3 class="text-sm text-gray-400 mb-3 flex items-center gap-2">
+                <span>🐴</span> 牛马指数
+              </h3>
+              <div class="mb-3">
+                <div class="flex justify-between text-xs text-gray-500 mb-1">
+                  <span>打工魂</span>
+                  <span>${p.niuMa}%</span>
+                </div>
+                <div class="h-3 bg-gray-800 rounded-full overflow-hidden">
+                  <div class="h-full bg-gradient-to-r from-orange-500 to-red-500 rounded-full transition-all duration-1000" style="width: 0%" id="niuMaBar"></div>
+                </div>
+              </div>
+              <p class="text-xs text-gray-400">你的灵魂含吗喽量：<span class="text-orange-400 font-bold">${p.niuMa}%</span></p>
+            </div>
+
+            <button id="restartBtn" class="w-full py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-bold text-lg hover:scale-[1.02] transition-transform cursor-pointer border-0 animate-fadeInUp" style="animation-delay: 0.8s">
+              🔄 重新测试
+            </button>
+          </div>
+        </div>
+      `;
+    }
+
+    function renderResultCode(code) {
+      const colors = ['neon-purple', 'neon-cyan', 'neon-pink', 'neon-orange'];
+      return code.split('').map((letter, i) => `
+        <span class="result-letter font-cyber ${colors[i]}">${letter}</span>
+      `).join('');
+    }
+
+    function attachEvents() {
+      const startBtn = document.getElementById('startBtn');
+      if (startBtn) {
+        startBtn.addEventListener('click', () => {
+          state.phase = 'test';
+          render();
+        });
+      }
+
+      const optionBtns = document.querySelectorAll('.option-btn');
+      optionBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          const option = parseInt(btn.dataset.option);
+          handleAnswer(option);
+        });
+      });
+
+      const restartBtn = document.getElementById('restartBtn');
+      if (restartBtn) {
+        restartBtn.addEventListener('click', () => {
+          state.currentQuestion = 0;
+          state.answers = new Array(32).fill(null);
+          state.scores = { E: 0, I: 0, S: 0, D: 0, R: 0, M: 0, A: 0, B: 0 };
+          state.phase = 'cover';
+          render();
+        });
+      }
+
+      if (state.phase === 'result') {
+        setTimeout(() => {
+          const result = calculateResult();
+          const p = personalityTypes[result];
+          const bar = document.getElementById('niuMaBar');
+          if (bar) {
+            bar.style.width = p.niuMa + '%';
+          }
+        }, 300);
+      }
+    }
+
+    function handleAnswer(option) {
+      state.answers[state.currentQuestion] = option;
+
+      const qIndex = state.currentQuestion;
+      const dimIndex = Math.floor(qIndex / 8);
+      const letterMap = [
+        ['E', 'I'],
+        ['S', 'D'],
+        ['R', 'M'],
+        ['A', 'B']
+      ];
+
+      if (option === 0) {
+        state.scores[letterMap[dimIndex][0]]++;
+      } else if (option === 1) {
+        state.scores[letterMap[dimIndex][1]]++;
+      }
+
+      if (state.currentQuestion < 31) {
+        state.currentQuestion++;
+        const app = document.getElementById('app');
+        app.innerHTML = renderTest();
+        attachEvents();
+      } else {
+        state.phase = 'result';
+        render();
+      }
+    }
+
+    function calculateResult() {
+      const { scores } = state;
+      const letter1 = scores.E > scores.I ? 'E' : (scores.E < scores.I ? 'I' : 'I');
+      const letter2 = scores.S > scores.D ? 'S' : (scores.S < scores.D ? 'D' : 'D');
+      const letter3 = scores.R > scores.M ? 'R' : (scores.R < scores.M ? 'M' : 'M');
+      const letter4 = scores.A > scores.B ? 'A' : (scores.A < scores.B ? 'B' : 'B');
+      return letter1 + letter2 + letter3 + letter4;
+    }
+
+    render();
+  
+
+
+
+  
+  </script>
+</body>
+</html>
