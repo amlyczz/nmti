@@ -595,42 +595,24 @@
     }
 
     function renderCover() {
-      const allTypes = Object.entries(personalityTypes);
-      const colors = ['purple', 'cyan', 'pink', 'orange'];
-
-      let typesHtml = allTypes.map(([code, p], i) => {
-        const color = colors[i % 4];
-        const colorClass = `text-${color}-400`;
-        const delay = (i * 0.05).toFixed(2);
-        return `
-          <div class="glass glow-border rounded-xl p-3 animate-fadeInUp" style="animation-delay: ${delay}s">
-            <div class="font-cyber ${colorClass} text-sm mb-1">${code}</div>
-            <div class="text-xs text-gray-300">${p.name}</div>
-          </div>
-        `;
-      }).join('');
-
       return `
-        <div class="min-h-screen flex flex-col items-center px-4 py-6 relative overflow-hidden">
+        <div class="min-h-screen flex flex-col items-center justify-center px-4 py-8 relative overflow-hidden">
           <div class="absolute inset-0 overflow-hidden">
             <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl animate-float"></div>
             <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-pink-500/20 rounded-full blur-3xl animate-float" style="animation-delay: 1s"></div>
             <div class="absolute top-1/2 right-1/3 w-64 h-64 bg-cyan-500/10 rounded-full blur-3xl animate-float" style="animation-delay: 2s"></div>
           </div>
 
-          <div class="relative z-10 text-center max-w-2xl mx-auto animate-fadeInUp">
-            <div class="mb-4">
-              <span class="text-5xl md:text-7xl font-cyber font-black neon-purple">NMTI</span>
+          <div class="relative z-10 text-center max-w-lg mx-auto animate-fadeInUp">
+            <div class="mb-6">
+              <span class="text-6xl md:text-8xl font-cyber font-black neon-purple">NMTI</span>
             </div>
 
-            <h1 class="text-lg md:text-xl font-cyber text-cyan-400 mb-2 neon-cyan">赛博人格测试</h1>
-            <p class="text-gray-400 mb-6 text-sm">
-              在这个人均心理大师的时代，你的赛博人格究竟是什么型号？
+            <h1 class="text-xl md:text-2xl font-cyber text-cyan-400 mb-2 neon-cyan">赛博人格测试</h1>
+            <p class="text-gray-400 mb-8 text-sm md:text-base">
+              在这个人均心理大师的时代<br>
+              你的赛博人格究竟是什么型号？
             </p>
-
-            <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-2 mb-6">
-              ${typesHtml}
-            </div>
 
             <button id="startBtn" class="px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full font-bold text-lg animate-pulse-glow hover:scale-105 transition-transform cursor-pointer border-0">
               开始测试 →
