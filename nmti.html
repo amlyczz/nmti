@@ -428,9 +428,10 @@ body {
             </div>
           </div>
 
-          <div class="flex items-center justify-between mt-4 px-4">
-            <button id="prevBtn" class="text-xs text-gray-500 hover:text-purple-400 transition-colors ${state.currentQuestion === 0 ? 'opacity-0 pointer-events-none' : ''}">← 上一题</button>
-            <span class="text-xs text-gray-600">选择后自动进入下一题</span>
+          <div class="mt-6">
+            <button id="prevBtn" class="w-full py-3 px-4 rounded-xl border border-gray-700 text-gray-400 hover:border-purple-500 hover:text-purple-400 transition-all text-sm ${state.currentQuestion === 0 ? 'opacity-0 pointer-events-none' : ''}">
+              ← 上一题
+            </button>
           </div>
         </div>
       `;
