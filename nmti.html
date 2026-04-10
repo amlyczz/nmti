@@ -506,6 +506,70 @@
         match: 'DIRB',
         rival: 'ESRA',
         niuMa: 98
+      },
+      'EDRA': {
+        name: `赛博掘墓人`,
+        tags: [`挖坟鞭尸`, `解构大师`, `悲观主义者`, `冷面笑匠`],
+        profile: `虽然你每天都在拆穿各种谎言和假象，但其实你心里比谁都希望这些谎言是真的`,
+        match: 'IDRB',
+        rival: 'ESRA',
+        niuMa: 45
+      },
+      'EDRB': {
+        name: `互联网掘墓人`,
+        tags: [`反向乐观`, `丧系玩家`, `揭露真相`, `冷幽默`],
+        profile: `虽然你嘴上说着这世界不会好了，但每次看到不公还是忍不住要骂两句`,
+        match: 'IDRA',
+        rival: 'ESRB',
+        niuMa: 65
+      },
+      'EDMA': {
+        name: `虚空分析师`,
+        tags: [`解构狂魔`, `意义消除师`, `后现代主义`, `反鸡汤战士`],
+        profile: `虽然你擅长把一切意义都消解掉，但深夜里你也会偷偷给喜欢的视频点赞`,
+        match: 'IDMA',
+        rival: 'ESMA',
+        niuMa: 35
+      },
+      'EDMB': {
+        name: `摆烂大师`,
+        tags: [`万物皆可摆`, `精神离职者`, `反内卷达人`, `摸鱼哲学家`],
+        profile: `虽然你嘴上说着摆烂，但每次deadline还是准时出现，只是姿态比较飘逸`,
+        match: 'IDMB',
+        rival: 'ESMB',
+        niuMa: 92
+      },
+      'IDRA': {
+        name: `内向解构者`,
+        tags: [`潜水拆台`, `社恐嘴毒`, `暗中吐槽`, `独狼型乐子人`],
+        profile: `虽然你在群里从来不发声，但你的小红心暴露了你其实什么都看在眼里`,
+        match: 'EDRB',
+        rival: 'DIRA',
+        niuMa: 28
+      },
+      'IDRB': {
+        name: `社恐清道夫`,
+        tags: [`默默围观`, `清醒的隐形人`, `互联网清洁工`, `只点赞不说话`],
+        profile: `虽然你看起来是互联网透明人，但你的每一个点赞都是对这个世界的小小抗议`,
+        match: 'EDRA',
+        rival: 'DIRB',
+        niuMa: 55
+      },
+      'IDMA': {
+        name: `暗号解读者`,
+        tags: [`互联网黑话专家`, `梗图收藏家`, `缩写狂人`, `解密大师`],
+        profile: `虽然你说的话只有你自己能懂，但你其实是在筛选真正愿意理解你的人`,
+        match: 'EDMA',
+        rival: 'DIMA',
+        niuMa: 42
+      },
+      'IDMB': {
+        name: `纯纯牛马本马`,
+        tags: [`吗喽本喽`, `牛马精神`, `间歇性踌躇满志`, `持续性混吃等死`],
+        profile: `虽然你天天自嘲牛马，但第二天还是准时出现在工位上，这才是真正的赛博打工魂`,
+        match: 'EDMB',
+        rival: 'DIMA',
+        niuMa: 99
       }
     };
 
@@ -585,9 +649,6 @@
 
     function renderTest() {
       const q = questions[state.currentQuestion];
-      const dimensionIndex = Math.floor(state.currentQuestion / 8);
-      const dimensionNames = ['互动', '内核', '表达', '生存'];
-      const dimensionEmojis = ['🌐', '💫', '💬', '⚔️'];
       const progress = ((state.currentQuestion) / 32) * 100;
 
       return `
@@ -601,11 +662,7 @@
             </div>
 
             <div class="flex items-center justify-between">
-              <div class="flex items-center gap-2">
-                <span class="text-xl">${dimensionEmojis[dimensionIndex]}</span>
-                <span class="text-sm text-gray-400">第 ${dimensionIndex + 1}/4 维度：${dimensionNames[dimensionIndex]}</span>
-              </div>
-              <span class="text-xs text-gray-600">${state.currentQuestion + 1}/32</span>
+              <span class="text-xs text-gray-500">${state.currentQuestion + 1}/32</span>
             </div>
           </div>
 
