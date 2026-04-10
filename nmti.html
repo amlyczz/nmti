@@ -648,7 +648,7 @@
     }
 
     function renderTest() {
-      const q = questions[state.currentQuestion];
+      const q = state.shuffledQuestions[state.currentQuestion];
       const progress = ((state.currentQuestion) / 32) * 100;
 
       return `
@@ -791,6 +791,7 @@
       if (startBtn) {
         startBtn.addEventListener('click', () => {
           state.phase = 'test';
+          state.shuffledQuestions = [...questions].sort(() => Math.random() - 0.5);
           render();
         });
       }
